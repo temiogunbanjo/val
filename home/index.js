@@ -24,10 +24,12 @@ Draggable.create("#accept", {
       acceptBtn.innerText = "Yes, I would!";
       alert("Woohoo! 💖");
       this.disable();
+      window.location.href = 'https://wa.me/+2349059620514?text=I%20said%20Yes';
     } else if (this.endX <= left + 3) {
       acceptBtn.innerText = "Nope, I won't!";
       alert("Aww, it's okay. Maybe next time! 💔");
       this.disable();
+      window.location.href = 'https://wa.me/+2349059620514?text=I%20said%20No';
     } else {
       console.log("DragEnd", this.maxX, this.endX);
     }

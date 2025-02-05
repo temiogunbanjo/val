@@ -19,6 +19,7 @@ h2 {
 }
 
 .actions {
+  position: relative;
   overflow: hidden;
   border-radius: 5vh;
   /* background-color: rgba(0, 0, 0, 0.24); */
@@ -33,12 +34,31 @@ h2 {
   gap: 70px;
 }
 
+.actions span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.actions span:first-child {
+  position: absolute;
+  left: 5%;
+  /* transform: translateX(-50%); */
+}
+
+.actions span:last-child {
+  position: absolute;
+  right: 5%;
+  /* transform: translateY(-50%); */
+}
+
 button {
+  z-index: +99;
   border-radius: 5vh;
   padding: 10px 20px;
   font-size: 1.5rem;
   width: auto;
-  background-color: transparent;
+  /* background-color: transparent; */
   border: 2px solid white;
   text-transform: capitalize;
   transition: all 0.3s ease;
