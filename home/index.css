@@ -1,0 +1,76 @@
+body {
+  color: white;
+  background-color: crimson;
+  background-image: radial-gradient(
+    ellipse,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.4)
+  );
+}
+
+h2 {
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 6rem;
+  margin-bottom: 4rem;
+  font-weight: 900;
+  text-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+
+.actions {
+  overflow: hidden;
+  border-radius: 5vh;
+  /* background-color: rgba(0, 0, 0, 0.24); */
+  background-image: radial-gradient(circle, transparent, rgba(0, 0, 0, 0.2));
+  width: 100%;
+  min-width: 300px;
+  max-width: 600px;
+  border: 1px solid rgba(0, 0, 0, 0.167);
+  margin: 40px auto 0;
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+}
+
+button {
+  border-radius: 5vh;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  width: auto;
+  background-color: transparent;
+  border: 2px solid white;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+}
+
+button:first-child {
+  background-color: white;
+  color: crimson;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  /* border-color: rgb(174, 16, 47); */
+}
+
+/* button:last-child {
+  background-color: rgb(185, 17, 50);
+  border-color: rgb(174, 16, 47);
+} */
+
+button:hover, button:focus {
+  animation: none;
+  /* border-color: rgb(174, 16, 47); */
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.valentine-container {
+  font-family: "Dancing Script", sans-serif;
+  padding: 20%;
+}
+
+.valentine-container small {
+  display: inline-block;
+  font-size: 2rem;
+  font-family: "Cookie", sans-serif;
+  margin-bottom: 3rem;
+}
