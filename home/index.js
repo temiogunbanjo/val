@@ -20,11 +20,11 @@ Draggable.create("#accept", {
     const right = this.maxX;
     const left = this.minX;
 
-    if (this.endX >= right) {
-      acceptBtn.innerText = "Yes, I will!";
+    if (this.endX >= right - 3) {
+      acceptBtn.innerText = "Yes, I would!";
       alert("Woohoo! 💖");
       this.disable();
-    } else if (this.endX <= left) {
+    } else if (this.endX <= left + 3) {
       acceptBtn.innerText = "Nope, I won't!";
       alert("Aww, it's okay. Maybe next time! 💔");
       this.disable();
@@ -34,10 +34,10 @@ Draggable.create("#accept", {
   },
 });
 
-var tl = gsap.timeline({ repeat: 2, repeatDelay: 1 });
+var tl = gsap.timeline({  });
 tl.from(".valentine-container small", { opacity: 0, duration: 1 });
-tl.from(".valentine-container h2", { scale: 0, duration: 1 });
-tl.from("#id", { width: "10%", duration: 1 });
+tl.from(".valentine-container h2", { scale: 0, duration: 3 });
+tl.from(".actions", { width: "10%", opacity: 0, duration: 1 });
 
 if (declineBtn) {
   declineBtn.addEventListener("click", function () {
