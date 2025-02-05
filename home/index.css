@@ -94,3 +94,10 @@ button:hover, button:focus {
   font-family: "Cookie", sans-serif;
   margin-bottom: 3rem;
 }
+
+@media only screen and (max-width: 768px) {
+  h2 {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+  }
+}
