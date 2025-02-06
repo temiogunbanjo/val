@@ -36,10 +36,10 @@ Draggable.create("#accept", {
   },
 });
 
-var tl = gsap.timeline({  });
-tl.from(".valentine-container small", { opacity: 0, duration: 1 });
-tl.from(".valentine-container h2", { scale: 0, duration: 3 });
-tl.from(".actions", { width: "10%", opacity: 0, duration: 1 });
+var tl = gsap.timeline({ delay: 1.5 });
+tl.from(".valentine-container small", { opacity: 0, duration: 1.5, });
+tl.from(".valentine-container h2", { scale: 0, duration: 3.2, delay: 0.5, ease: 'power1.out' });
+tl.from(".actions", { width: "0%", opacity: 0, duration: 1.8, delay: 0.5, ease: 'circ.out' });
 
 if (declineBtn) {
   declineBtn.addEventListener("click", function () {

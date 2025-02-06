@@ -1,11 +1,15 @@
 body {
   color: white;
   background-color: crimson;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
   background-image: radial-gradient(
-    ellipse,
+    circle,
     rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0.4)
+    rgba(0, 0, 0, 0.6)
   );
+  animation: unblur 1.5s ease-in-out 0ms 1 both normal;
 }
 
 h2 {
@@ -25,7 +29,7 @@ h2 {
   /* background-color: rgba(0, 0, 0, 0.24); */
   background-image: radial-gradient(circle, transparent, rgba(0, 0, 0, 0.2));
   width: 100%;
-  min-width: 300px;
+  min-width: 200px;
   max-width: 600px;
   border: 1px solid rgba(0, 0, 0, 0.167);
   margin: 40px auto 0;
@@ -76,7 +80,8 @@ button:first-child {
   border-color: rgb(174, 16, 47);
 } */
 
-button:hover, button:focus {
+button:hover,
+button:focus {
   animation: none;
   /* border-color: rgb(174, 16, 47); */
   transform: scale(1.1);
@@ -95,9 +100,29 @@ button:hover, button:focus {
   margin-bottom: 3rem;
 }
 
+@keyframes unblur {
+  from {
+    background-size: 100%;
+    filter: blur(15px) opacity(0%);
+  }
+
+  to {
+    background-size: 250%;
+    filter: blur(0px) opacity(100%);
+  }
+}
+
 @media only screen and (max-width: 768px) {
   h2 {
     font-size: 4rem;
     margin-bottom: 3rem;
+  }
+
+  .valentine-container {
+    padding: 10%;
+  }
+
+  button {
+    font-size: 1rem;
   }
 }
