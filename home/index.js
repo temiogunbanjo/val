@@ -1,7 +1,16 @@
 const declineBtn = document.getElementById("decline");
 const acceptBtn = document.getElementById("accept");
-
 const tl = gsap.timeline({ delay: 1.5 });
+
+function supportsClasses() {
+  try {
+    new Function('"use strict"; class Test {}')();
+    return true;
+  } catch (error) {
+    return false;
+  }
+}
+
 tl.from(".valentine-container small", { opacity: 0, x: -100, duration: 1.5 });
 tl.from(".valentine-container h2", {
   scale: 0,
@@ -31,6 +40,7 @@ Draggable.create("#accept", {
   onDragEnd: function () {
     const right = this.maxX;
     const left = this.minX;
+    const timeout = !supportsClasses() ? 1000 : 8000;
 
     if (this.endX >= right - 3) {
       acceptBtn.innerText = "Yes, I would!";
@@ -39,7 +49,7 @@ Draggable.create("#accept", {
       window.setInterval(() => {
         window.location.href =
           "https://wa.me/+2349059620514?text=I%20said%20Yes";
-      }, 8000);
+      }, timeout);
       startAnimation();
     } else if (this.endX <= left + 3) {
       acceptBtn.innerText = "Nope, I won't!";
