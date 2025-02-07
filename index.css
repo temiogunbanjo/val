@@ -26,7 +26,7 @@ h2 {
 
 h2,
 button {
-  font-family: "Dancing Script", sans-serif;
+  font-family: "Cookie", sans-serif;
 }
 
 label {
@@ -41,7 +41,7 @@ input[type="password"], input[type="password"]:focus-visible {
   margin-bottom: 30px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 1.5rem;
+  font-size: 1rem;
   outline-color: crimson;
 }
 
