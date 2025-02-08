@@ -6,7 +6,7 @@ canvas.height = window.innerHeight;
 
 const fireworks = [];
 const particles = [];
-const fireworksColors = ["red", "white", "purple", "cyan", "yellow", "chocolate"];
+const fireworksColors = ["#A69658", "white", "purple", "#600047", "#FFA630", "#0A2463"];
 
 class Firework {
   constructor({
@@ -118,9 +118,9 @@ function getRandomNumberInRange(max, min = 0) {
 
 // Generate fireworks
 function generateFirework() {
-  const x = Math.random() * canvas.width;
+  const x = getRandomNumberInRange(canvas.width - 50, 50);
   const color = fireworksColors[getRandomNumberInRange(fireworksColors.length)];
-  const angle = getRandomNumberInRange(105, 75);
+  const angle = getRandomNumberInRange(100, 80);
   const firework = new Firework({ x, y: canvas.height, color, angle, impulse: 10, mass: 0.45 });
   fireworks.push(firework);
 }

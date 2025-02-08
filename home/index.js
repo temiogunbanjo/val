@@ -13,19 +13,24 @@ function supportsClasses() {
 
 tl.from(".valentine-container small", { opacity: 0, x: -100, duration: 1.5 });
 tl.from(".valentine-container h2", {
-  scale: 0,
-  duration: 3,
-  delay: 0.5,
-  ease: "power1.out",
-});
-tl.from(".actions", {
-  width: "40%",
-  y: 100,
   opacity: 0,
-  duration: 1.8,
-  delay: 0.1,
-  ease: "circ.out",
+  scale: 0.05,
+  duration: 3.2,
+  delay: 0.5,
+  ease: "power2.out",
 });
+tl.from(
+  ".actions",
+  {
+    width: "20%",
+    y: 150,
+    opacity: 0,
+    duration: 1.5,
+    delay: 0,
+    ease: "power1.out",
+  },
+  "-=0.2"
+);
 
 gsap.registerPlugin(Draggable);
 
@@ -58,6 +63,15 @@ Draggable.create("#accept", {
       window.location.href = "https://wa.me/+2349059620514?text=I%20said%20No";
     } else {
       console.log("DragEnd", this.maxX, this.endX);
+    }
+  },
+  onDrag: function () {
+    const left = this.minX;
+    if (this.endX < 0) {
+      const percentBrightness = Number((1 - this.endX / left) * 100).toFixed(1);
+      // document.body.style.clipPath = `circle(${percentBrightness}% at 50% 50%)`;
+    } else {
+      // document.body.style.filter = `unset`;
     }
   },
 });
