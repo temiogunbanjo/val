@@ -14,7 +14,7 @@ class Firework {
     x,
     y,
     color,
-    radius = 10,
+    radius = 13,
     impulse = 8,
     angle = 90,
     mass = 0.4,
@@ -70,7 +70,7 @@ class Firework {
         ctx.arc(
           this.trail[i].x,
           this.trail[i].y,
-          this.radius / 2,
+          Math.max(0, this.radius / 2 - (this.trail.length / 2 - i)),
           0,
           Math.PI * 2
         );
@@ -122,7 +122,14 @@ function generateFirework() {
   const x = getRandomNumberInRange(canvas.width - 50, 50);
   const color = fireworksColors[getRandomNumberInRange(fireworksColors.length)];
   const angle = getRandomNumberInRange(95, 85);
-  const firework = new Firework({ x, y: canvas.height, color, angle, impulse: 12, mass: 0.45 });
+  const firework = new Firework({
+    x,
+    y: canvas.height,
+    color,
+    angle,
+    impulse: 12,
+    mass: 0.45,
+  });
   fireworks.push(firework);
 }
 
@@ -146,8 +153,6 @@ function animate() {
 
   requestAnimationFrame(animate);
 }
-
-// Start animation
 
 // Start Animation
 const startAnimation = () => {
