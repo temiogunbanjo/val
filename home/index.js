@@ -14,7 +14,7 @@ function supportsClasses() {
 tl.from(".valentine-container small", { opacity: 0, x: -100, duration: 1.5 });
 tl.from(".valentine-container h2", {
   scale: 0,
-  duration: 3.2,
+  duration: 3,
   delay: 0.5,
   ease: "power1.out",
 });
@@ -40,7 +40,7 @@ Draggable.create("#accept", {
   onDragEnd: function () {
     const right = this.maxX;
     const left = this.minX;
-    const timeout = !supportsClasses() ? 1000 : 8000;
+    const timeout = !supportsClasses() ? 1000 : 6000;
 
     if (this.endX >= right - 3) {
       acceptBtn.innerText = "Yes, I would!";

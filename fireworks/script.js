@@ -121,7 +121,7 @@ function generateFirework() {
   const x = Math.random() * canvas.width;
   const color = fireworksColors[getRandomNumberInRange(fireworksColors.length)];
   const angle = getRandomNumberInRange(105, 75);
-  const firework = new Firework({ x, y: canvas.height, color, angle, impulse: 10 });
+  const firework = new Firework({ x, y: canvas.height, color, angle, impulse: 10, mass: 0.45 });
   fireworks.push(firework);
 }
 
