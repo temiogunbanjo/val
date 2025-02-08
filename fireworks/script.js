@@ -6,7 +6,8 @@ canvas.height = window.innerHeight;
 
 const fireworks = [];
 const particles = [];
-const fireworksColors = ["#A69658", "white", "purple", "#600047", "#FFA630", "#0A2463"];
+const fireworksColors = ["#A1E44D", "#EEFFDB", "#FFA630", "cyan"];
+const gravity = 0.11;
 
 class Firework {
   constructor({
@@ -25,7 +26,7 @@ class Firework {
     this.mass = mass;
     this.velocityX = Math.cos((Math.PI * angle) / 180) * impulse;
     this.velocityY = -Math.sin((Math.PI * angle) / 180) * impulse;
-    this.gravity = 0.09;
+    this.gravity = gravity || 0.08;
     this.isExploded = false;
     this.trail = [];
   }
@@ -90,7 +91,7 @@ class Particle {
     this.radius = Math.random() * 3 + 1;
     this.velocityX = (Math.random() - 0.5) * 5;
     this.velocityY = (Math.random() - 0.5) * 5;
-    this.gravity = 0.05;
+    this.gravity = gravity || 0.08;
     this.lifespan = 100; // Fades over time
   }
 
@@ -120,8 +121,8 @@ function getRandomNumberInRange(max, min = 0) {
 function generateFirework() {
   const x = getRandomNumberInRange(canvas.width - 50, 50);
   const color = fireworksColors[getRandomNumberInRange(fireworksColors.length)];
-  const angle = getRandomNumberInRange(100, 80);
-  const firework = new Firework({ x, y: canvas.height, color, angle, impulse: 10, mass: 0.45 });
+  const angle = getRandomNumberInRange(95, 85);
+  const firework = new Firework({ x, y: canvas.height, color, angle, impulse: 12, mass: 0.45 });
   fireworks.push(firework);
 }
 
@@ -150,7 +151,7 @@ function animate() {
 
 // Start Animation
 const startAnimation = () => {
-  setInterval(generateFirework, 600);
+  setInterval(generateFirework, 500);
   animate();
 };
 
