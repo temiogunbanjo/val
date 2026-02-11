@@ -6,7 +6,7 @@ let draggableInstance = null;
 const QUESTIONS = {
   question1: {
     greeting: 'Hi Sugar Baby,',
-    text: 'You Know You\'ve A Crush On Me right?'
+    text: 'You Know You Have A Crush On Me right?'
   },
   question2: {
     greeting: 'Okay, so...',
