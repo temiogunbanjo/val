@@ -175,7 +175,7 @@ function handleYesSelection() {
     const timeout = !supportsClasses() ? 1000 : 6000;
     window.setInterval(() => {
       window.location.href =
-        "https://wa.me/+2349059620514?text=I%20said%20Yes%20and%20that%20you%20are%20my%20crush%20!";
+        "https://wa.me/+2349059620514?text=I%20said%20Yes%20and%20that%20I%20am%20your%20biggest%20crushee!";
     }, timeout);
     
     // Start fireworks only after question 2 Yes
