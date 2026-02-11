@@ -2,7 +2,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     e.preventDefault();
   
     // Hardcoded password for simplicity
-    const correctPassword = 'KEFO';
+    const correctPassword = 'iamafinegirl';
   
     // Get the input value
     const passwordInput = document.getElementById('password').value;
