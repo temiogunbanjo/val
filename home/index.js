@@ -10,7 +10,7 @@ const QUESTIONS = {
   },
   question2: {
     greeting: 'Okay, so...',
-    text: 'Will you be my Val?🌹'
+    text: 'Will you be my Val?🌻' //🌹
   }
 };
 
