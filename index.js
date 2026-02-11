@@ -2,7 +2,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     e.preventDefault();
   
     // Hardcoded password for simplicity
-    const correctPassword = 'Valentine2025';
+    const correctPassword = 'Valentine2026';
   
     // Get the input value
     const passwordInput = document.getElementById('password').value;
