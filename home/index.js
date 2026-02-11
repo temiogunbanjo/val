@@ -6,7 +6,7 @@ let draggableInstance = null;
 const QUESTIONS = {
   question1: {
     greeting: 'Hi Sugar Baby,',
-    text: 'You Know I\'m Your Sugar Daddy right?'
+    text: 'You Know You\'ve A Crush On Me right?'
   },
   question2: {
     greeting: 'Okay, so...',
@@ -175,7 +175,7 @@ function handleYesSelection() {
     const timeout = !supportsClasses() ? 1000 : 6000;
     window.setInterval(() => {
       window.location.href =
-        "https://wa.me/+2349059620514?text=I%20said%20Yes%20that%20you%20are%20too%20hot%20and%20creative!!";
+        "https://wa.me/+2349059620514?text=I%20said%20Yes%20and%20that%20you%20are%20my%20crush%20!";
     }, timeout);
     
     // Start fireworks only after question 2 Yes
